@@ -41,7 +41,7 @@ var library = {
    var album = this.tracks[key].album;
    console.log(`${id}: ${name} by ${artist} (${album})`)
  }
- }
+ },
 
  printPlaylist : function (playlistId) {
 
@@ -62,24 +62,24 @@ var library = {
           console.log(`${id}: ${name} by ${artist} (${album})`)
         }
   
-}
+},
  addTrackToPlaylist : function (trackId, playlistId) {
 this.playlists[playlistId].tracks.push(trackId);
 
-}
+},
  uid = function() {
   return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
-}
+},
  addTrack : function (name, artist, album) {
 var ran = uid();
 this.tracks[ran] = {'id' : ran, 'name': name, 'artist' : artist, 'album' : album};
 
-}
+},
 
  addPlaylist : function (name) {
   var ran = uid();
   this.playlists[ran] = {'id' : ran ,'name' : name , 'tracks' : [] };
-}
+},
                                
 }
 
